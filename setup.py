@@ -425,7 +425,7 @@ class Checks():
 
     def cuda_ask_enable(self):
         """ Enable or disable CUDA """
-        i = input("Enable  CUDA? [Y/n] ")
+        i = "y" #input("Enable  CUDA? [Y/n] ")
         if i in ("", "Y", "y"):
             self.output.info("CUDA Enabled")
             self.env.enable_cuda = True
@@ -584,7 +584,7 @@ class Install():
 
     def ask_continue(self):
         """ Ask Continue with Install """
-        inp = input("Please ensure your System Dependencies are met. Continue? [y/N] ")
+        inp = "y"#input("Please ensure your System Dependencies are met. Continue? [y/N] ")
         if inp in ("", "N", "n"):
             self.output.error("Please install system dependencies to continue")
             sys.exit(1)
