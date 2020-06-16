@@ -389,7 +389,7 @@ class Checks():
         """ Enable or disable Plaidml for AMD"""
         self.output.info("AMD Support: AMD GPU support is currently limited.\r\n"
                          "Nvidia Users MUST answer 'no' to this option.")
-        i = input("Enable AMD Support? [y/N] ")
+        i = "n" #input("Enable AMD Support? [y/N] ")
         if i in ("Y", "y"):
             self.output.info("AMD Support Enabled")
             self.env.enable_amd = True
@@ -399,7 +399,7 @@ class Checks():
 
     def docker_ask_enable(self):
         """ Enable or disable Docker """
-        i = input("Enable  Docker? [y/N] ")
+        i = "y" #input("Enable  Docker? [y/N] ")
         if i in ("Y", "y"):
             self.output.info("Docker Enabled")
             self.env.enable_docker = True
